@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Index Legend no-NASA jQuery v2</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<style>
+body {
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 90%;
+	margin: 0px auto;
+	color: white;
+}
+a {
+	color: #69C;
+}
+th {
+	text-align: left;
+	background-color: #555;
+}
+td {
+	background-color: black;
+}
+
+.stripe{
+	background-color: #222;	
+	text-transform:capitalize;
+}
+
+#mapdiv {
+  float: left;
+  width: 46%; /* 300px;  */ 
+  height: 400px;  /* 50%; ;  */
+  margin-right: 10px;
+  text-transform:capitalize;
+}
+#mapdiv g {
+	color: white;
+}
+#tableFrame {
+	float: right;
+	width: 46%;
+	height:400px;
+	overflow:auto;
+	padding: 0px 0;
+	margin: 0 0 0 0;
+	display: inline;
+}
+#radioButtons {
+	clear:both;
+	width: 90%;
+	padding: 6px;
+}
+
+</style>
+<script type="text/javascript" src="ammap/ammap.js"></script>
+<script type="text/javascript" src="ammap/maps/js/usaLow.js"></script>
+<script type="text/javascript" src="ammap/themes/light.js"></script>
+<script src="js/map.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/xmlfiltering_copy.css">
+<script src="js/xmlfilerting_active.js"></script>
+
+<!-- the Map script needs to go first ?  -->
+<!-- add accordian code  -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+ <style>
+/* IE has layout issues when sorting (see #5413) */
+.group { zoom: 1 }
+</style>
+
+<script type="text/javascript">
+$(function() {
+$( "#accordion" ).accordion();
+	event: "click"
+        active: false
+        collapsible: true
+        autoHeight: false
+
+});
+
+</script>
+
+</head>
+<body>
+<h1>bAmerica's Deep Space Program</h1>
+<p><strong>Exploration Systems Development Partners and Suppliers</strong>
+  <!-- start of code -->
+
+
+<div id="mapdiv"></div>
+
+<div id="tableFrame">
+State Information:
+<table id='datatable' width="100%" cellpadding="6" cellspacing="1">
+  <tr id='tableheader'>
+    <th>Program</th>
+    <th>Company</th>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+</table>
+</div>
+
+<div id="radioButtons">
+
+<div id="criteria"> Selection:
+  <input type='radio' name='select' value="" checked="CHECKED" onChange="changeState(this.value);">
+  ALL
+  <input type='radio' name="select" value="AL" onChange="changeState(this.value);">
+  AL
+  <input type='radio' name='select' value="CA" onChange="changeState(this.value);">
+  CA
+  <input type='radio' name='select' value="CO" onChange="changeState(this.value);">
+  CO
+  <input type='radio' name='select' value="OH" onChange="changeState(this.value);">
+  OH </div>
+ <div id="criteria"> Program:
+  <input type='radio' name='select2' value="" checked="CHECKED" onChange="changeProgram(this.value);">
+  ALL
+  <input type='radio' name="select2" value="GDSO" onChange="changeProgram(this.value);">
+  GDSO
+  <input type='radio' name='select2' value="SLS" onChange="changeProgram(this.value);">
+  SLS
+  <input type='radio' name='select2' value="ORION" onChange="changeProgram(this.value);">
+  ORION
+   </div>
+   </div> <!-- end radio buttons  -->
+<div id="accordion">
+
+	<h2>Program Information</h2>
+	<div>
+	<p>NASA's Exploration Systems Development Division is continuing America's journey of discovery by building the next-generation rocket, crew vehicle and ground systems operations to facilitate our journey into deep space — beyond the moon, to an asteroid and eventually to Mars.
+</p><p>
+Orion is the first spacecraft in history capable of taking humans to multiple destinations in deep space. The crew vehicle is designed for long-duration missions, is adaptable to a variety of activities and environments, and provides life-sustaining support to crew. 
+</p><p>
+The Space Launch System is the rocket and launch system capable of transporting humans, habitats and support systems directly into deep space. It is designed to be flexible for a crew, cargo or science mission and will be powerful, safe, affordable and sustainable. 
+</p><p>
+Ground Systems Development and Operations is adapting existing infrastructure and facilities to modernize Kennedy Space Center into a multi-user spaceport, capable of launching spacecraft built and designed by both NASA and private industry.
+	</p>
+	
+    </div>
+
+<h2>Prime Contractors</h2>
+<div><p>
+	<ul>
+		<li>Aerojet Rocketdyne – Sacramento, Calif.</li>
+		<li>Boeing – Houston, Texas</li>
+		<li>Alliant Techsystems (ATK) –  Magna, Utah  <br />Promontory, Utah</li>
+		<li>Lockheed Martin Space Systems Company – Bethesda, Md. </li>
+	</ul>
+    </p>
+    </div>
+   
+</div>
+
+</div>
+</p>
+
+
+
+</p>
+
+<!-- end of code -->
+
+</body>
+</html>
