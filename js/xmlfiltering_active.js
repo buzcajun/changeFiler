@@ -83,7 +83,19 @@ function zebraStripe(){
 function updateMap(){
 	$map.dataProvider.areas = [];
 	for(var $x in $states) {
-		$map.dataProvider.areas.push({ id: "US-" + $states[$x], selectable: true, value: $counts[$states[$x]] });
+		$map.dataProvider.areas.push({ id: "US-" + $states[$x], groupId: "US-" + $states[$x], selectable: true, value: $counts[$states[$x]] });
+		if ( 'DC' == $states[$x] ) {
+			$map.dataProvider.images[0].value = $counts[$states[$x]];
+			$map.dataProvider.images[0].title = "Washington, DC";
+		}
 	}
 	$map.validateData();
+	// now let's take the color of the area and apply to DC callout image
+	for ( var x in $map.dataProvider.areas ) {
+		if ( "US-DC" == $map.dataProvider.areas[x].id ) {
+			$map.dataProvider.images[0].color = $map.dataProvider.areas[x].colorReal;
+			$map.validateData();
+			break;
+		}
+	}
 }

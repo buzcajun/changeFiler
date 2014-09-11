@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+ 
+a {
+	color: #69C;
+}
+th {
+	text-align: left;
+	background-color: #555;
+}
+td {
+	background-color: black;
+}
+
+.stripe{
+	background-color: #222;	
+}
+
+#mapdiv {
+  float: left;
+  width: 46%; /* 300px;  */ 
+  height: 400px;  /* 50%; ;  */
+  margin-right: 10px;
+}
+#mapdiv g {
+	color: white;
+}
+#tableFrame {
+	float: right;
+	width: 46%;
+	height:400px;
+	overflow:auto;
+	padding: 0px 0;
+	margin: 0 0 0 0;
+	display: inline;
+}
+#radioButtons {
+	clear:both;
+	width: 90%;
+}
